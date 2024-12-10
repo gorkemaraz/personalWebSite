@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görkem Yazılım</title>
+    <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--header başlagiç -->
+    <header class="header">
+        <a href="#home"class="logo">Görkem <span>Yazılım</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home"class="active">Ana Sayfa</a>
+            <a href="#education">Eğitim</a>
+            <a href="#projects">Projeler</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+    <!--header bitiş -->
+    <!-- HOME START -->
+    <section class="home" id="home">
+        <div class="home-content"> 
+            <h1>Merhaba,ben Görkem</h1>
+            <h3 class="text-animation">Ben <span id="dynamic-text"></span></span></h3>
+            <p>Bandırma Onyedi Eylül Üniversitesi Bilgisayar Mühendisliği 2. Sınıf öğrencisiyim. C, C++, Java ve Python programlama dillerinde bilgi sahibiyim. Şu anda veri bilimi alanında çalışıyor ve bu alanda kendimi geliştirmeye devam ediyorum. Teknolojiye olan ilgim ve sürekli öğrenme isteğimle gelecekte başarılı projelere imza atmayı hedefliyorum.</p>
+
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gorkemaraz_" target="_blank"> <i class='bx bxl-instagram'></i> </a>
+                <a href="https://twitter.com/gorkem_root" target="_blank"> <i class='bx bxl-twitter'></i> </a>
+                <a href="https://github.com/gorkemaraz" target="_blank"> <i class='bx bxl-github'></i> </a>
+                <a href="https://www.linkedin.com/in/gorkemaaraz/" target="_blank"> <i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+            <div class="btn-group">
+                    <a href="a" class="btn">CV</a>
+                    <a href="mailto:gorkemaaraz@gmail.com" class="btn">İletişim</a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="img/loggo.png" width="450" height="450"alt="logo">
+        </div>
+    </section>
+    <!-- HOME END -->
+    <!--EDUCATİON START -->
+    <section class="education" id="education">
+        <h2 class="heading">EĞİTİM</h2>
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2018-2022</div>
+                <div class="timeline-content">
+                    <h3>LİSE</h3>
+                    <p>LGS sınavı ile kazandığım Alpaslan Fen lisesinden 2022 yılında mezun oldum</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023-2027</div>
+                <div class="timeline-content">
+                    <h3>Üniversite</h3>
+                    <p>Bandırma Onyedi Eylül Üniversitesi Bilgisayar Mühendisliği 2. Sınıf öğrencisi olarak öğrenimime devam etmekteyim. C, C++, Java ve Python programlama dillerinde bilgi sahibiyim.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Teknik Analiz</h3>
+                    <p>Aldığım teknik alaniz eğitimleri dolayısı ile 2 yıldır Ağırlıklı olarak Borsa istanbul olmak üzere dünya piyasalarında işlemler yapmaktayım.</p>
+                </div>
+            </div>
+
+        </div>  
+
+    </section>
+     <!-- PROJECTS START -->
+    <section id="projects" class="projects">
+        <h2 class="heading">PROJELER</h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <div class="projects-info">
+                    <h4>Three Inside Up Tarama Aracı</h4>
+                    <p>Bu projeyi, Borsa İstanbul'daki son 3 günün mum verilerini kullanarak "Three Inside Up" formasyonunu tespit etmek için geliştirdim. Python ve yfinance kütüphanesini kullanarak, hangi hisse senetlerinde bu formasyonun oluştuğunu tarayan bir algoritma yazdım. Formasyonu tespit ettiğim hisseleri ekrana yazdırarak kullanıcıya gösteriyorum. Teknik analizle alım-satım kararları almanıza yardımcı olmak için bu projeyi tasarladım.</p>
+                </div>
+            </div>
+            <div class="projects-box">
+                <div class="projects-info">
+                    <h4>Bullish Engulfing Tarama Aracı</h4>
+                    <p>Bu projeyi, Borsa İstanbul'daki hisse senetlerinde "Bullish Engulfing" formasyonunu tespit etmek için geliştirdim. Bullish Engulfing, bir düşüş trendinin ardından meydana gelen bir yükseliş sinyali olarak kabul edilen bir teknik analiz formasyonudur.</p>
+                </div>
+            </div>
+            <div class="projects-box">
+                <div class="projects-info">
+                    <h4>RSI Temelli Yatırım Sinyalleri</h4>
+                    <p>Bu projede, teknik analizdeki geleneksel yöntemlere alternatif olarak özel bir algoritma kullanarak hisse senetlerindeki RSI uyumsuzluklarını inceliyorum. Fiyat hareketleri ile RSI arasındaki önemli ilişkiyi tespit eden bu algoritma, gizli ve belirgin uyumsuzlukları analiz eder ve yatırımcılara potansiyel alım-satım fırsatlarını sunar.</p>
+                </div>
+            </div>
+            <div class="projects-box">
+                <div class="projects-info">
+                    <h4>Web Geliştirme Çalışmam</h4>
+                    <p>HTML, CSS ve JavaScript teknolojilerini kullanarak oluşturduğum bu site, modern web geliştirme prensiplerini temel alıyor. Tasarımda kullanıcı dostu bir arayüz ve temiz kodlama yaklaşımlarına odaklandım.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- PROJECTS END -->
+        <!--CONTACT START-->
+        <section class="contact" id="contact">
+            <h2 class="heading">İletişim</h2>
+            <form action="/api/messages" method="POST" id="connodtactForm">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Adınız" required />
+                        <input type="email" name="email" placeholder="E-posta" />                
+                    </div>
+                    <div class="input-box">
+                        <input type="number" name="phone" placeholder="Telefon" required />
+                        <input type="text" name="subject" placeholder="Konu" />                
+                    </div>
+                </div>
+                <div class="input-group-2">
+                    <textarea name="message" placeholder="Mesajınız"cols="30" rows="10"></textarea>
+                    <input type="submit" value="Mesajı Gönder" class="btn" />
+                </div>
+            </form>
+            </div>
+        </section>
+    <!--CONTACT  END-->
+    <!--FOOTER START-->
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/gorkemaraz_" target="_blank"> <i class='bx bxl-instagram'></i> </a>
+            <a href="https://twitter.com/gorkem_root" target="_blank"> <i class='bx bxl-twitter'></i> </a>
+            <a href="https://github.com/gorkemaraz" target="_blank"> <i class='bx bxl-github'></i> </a>
+            <a href="https://www.linkedin.com/in/gorkemaaraz/" target="_blank"> <i class='bx bxl-linkedin-square' ></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#home">Ana Sayfa</a>
+            </li>
+            <li>
+                <a href="#education">Eğitim</a>
+            </li>
+            <li>
+                <a href="#projects">Projeler</a>
+            </li>
+        </ul>
+        <p class="copyright">&copy; <span>Görkem Yazılım</span> | Tüm hakları saklıdır</p>
+ 
+    </footer>
+    <!--FOOTER END-->
+    <script src="script.js"></script>
+</body>
+</html>
