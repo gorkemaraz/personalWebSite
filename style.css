@@ -126,7 +126,7 @@ margin-top: 3rem;
     0 45px var(--main-color), 0 0 100px var(--main-color);
 }
 .home-content p{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.9;
     max-width: 1000px;
@@ -286,7 +286,7 @@ box-shadow: 0 0 25 transparent;
 .timeline-content{
     background-color: var(--bg-color);
     border: 3px solid var(--main-color);
-    padding: 30px 50px;
+    padding: 25px 25px;
     border-radius: 4rem;
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
@@ -589,16 +589,20 @@ section{
     margin: 0;
 }
 .home-content h1{
-font-size: 5rem;
-margin-bottom: 5rem;
+    padding: 10px;
+    font-size: 5rem;
+    margin-bottom: 5rem;
 }
 .home-content h3{
+    padding: 10px;
     font-size: 3rem;
 }
 .text-animation span{
     font-size: 2.6rem;
 }
 .home-content p{
+    padding: 10px;
+    max-width: 95%;
     font-size: 2rem;
 }
 .home-content .social-icons, 
@@ -647,6 +651,32 @@ h2.heading{
     }
     .projects-container{
         margin: 0;
+    }
+}
+@media (max-width: 402px) {
+.home-content h1{
+    font-size: 5rem;
+    padding-left: 20px;
+}
+.home-content h3{
+    font-size: 2.3rem;
+    padding-left: 20px;
+    margin-top: -30px;
+}
+.text-animation span{
+    font-size: 2.3rem;
+    
+}
+.home-content p{
+    font-size: 1.7rem;
+    padding-left: 20px;
+    max-width: 95%;
+}
+}
+@media screen and (min-width: 1024px) and (max-width: 1540px) {
+    .timeline-item:nth-child(odd) .timeline-date {
+        padding-left: calc(50% + 30px); 
+        text-align: right; 
     }
 }
 /*MEDİA QUERIES END */ 
