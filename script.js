@@ -62,7 +62,7 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/submit-form', {
+        const response = await fetch('https://gorkemaraz.com/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

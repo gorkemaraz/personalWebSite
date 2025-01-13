@@ -3,6 +3,27 @@
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "nodemailer": "^6.9.16"
-  }
+    "fs": "^0.0.1-security",
+    "nodemailer": "^6.9.16",
+    "xlsx": "^0.18.5"
+  },
+  "name": "site",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorkemaraz/personalWebSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gorkemaraz/personalWebSite/issues"
+  },
+  "homepage": "https://github.com/gorkemaraz/personalWebSite#readme",
+  "description": ""
 }

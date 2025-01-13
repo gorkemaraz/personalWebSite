@@ -1,63 +1,60 @@
-require('dotenv').config();
-const fs = require('fs');
-const https = require('https');
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const app = express();
-const PORT = 443; // HTTPS için 443 portunu kullanıyoruz
+const fs = require('fs');
+const xlsx = require('xlsx');
+const path = require('path');
+const https = require('https');
 
-// Sertifika ve Anahtar Dosyalarını Yükle
+const app = express();
+const PORT = 8080; // HTTPS portu
 const options = {
-    key: fs.readFileSync('/home/gorkemar/ssl/keys/privatekey.key'),   // Private key dosyasının yolu
-    cert: fs.readFileSync('/home/gorkemar/ssl/certs/certificate.crt'),  // Sertifika dosyasının yolu
+    key: fs.readFileSync('/home/gorkemar/ssl/keys/be205_2c3f5_f1b8d9bd85ad610ac7121e3c490b2806.key'),
+    cert: fs.readFileSync('/home/gorkemar/ssl/certs/certificate.crt')
 };
 
 // Middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('/home/gorkemar/public_html')); // Static dosyalar için
 
-// Serve static files (if necessary)
-app.use(express.static('public'));
-
-// Endpoint for handling form submissions
-app.post('/api/messages', async (req, res) => {
-    const { name, email, phone, subject, message } = req.body;
-
-    if (!name || !email || !message) {
-        return res.status(400).send('Lütfen gerekli tüm alanları doldurun.');
-    }
-
-    try {
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        });
-
-        // Email content
-        const mailOptions = {
-            from: `"${name}" <${email}>`, // Sender
-            to: 'info@gorkemaraz.com', // Recipient
-            subject: subject || 'Yeni İletişim Formu Mesajı',
-            text: `Ad: ${name}\nE-posta: ${email}\nTelefon: ${phone || 'Belirtilmedi'}\n\nMesaj:\n${message}`,
-        };
-
-        // Send email
-        await transporter.sendMail(mailOptions);
-
-        res.status(200).send('Mesaj başarıyla gönderildi.');
-    } catch (error) {
-        console.error('E-posta gönderim hatası:', error);
-        res.status(500).send('Mesaj gönderilirken bir hata oluştu.');
-    }
+// HTTPS Server
+https.createServer(options, app).listen(PORT, () => {
+    console.log(`HTTPS Server is running on https://localhost:${PORT}`);
 });
 
-// HTTPS Sunucusunu Başlat
-https.createServer(options, app).listen(PORT, () => {
-    console.log(`Server is running at https://localhost:${PORT}`);
+// Endpoint to handle form submission
+app.post('/submit-form', (req, res) => {
+    const { name, email, phone, subject, message } = req.body;
+
+    if (!name || !email || !phone || !subject || !message) {
+        return res.status(400).json({ error: 'All fields are required!' });
+    }
+
+    // Save data to .txt
+    const entry = `Name: ${name}, Email: ${email}, Phone: ${phone}, Subject: ${subject}, Message: ${message}\n`;
+    fs.appendFile('form_data.txt', entry, (err) => {
+        if (err) {
+            console.error('Error saving to .txt:', err);
+            return res.status(500).json({ error: 'Failed to save data.' });
+        }
+
+        // Save data to .xlsx
+        const filePath = path.join(__dirname, 'form_data.xlsx');
+        let workbook, sheet;
+
+        if (fs.existsSync(filePath)) {
+            workbook = xlsx.readFile(filePath);
+            sheet = workbook.Sheets[workbook.SheetNames[0]];
+        } else {
+            workbook = xlsx.utils.book_new();
+            sheet = xlsx.utils.aoa_to_sheet([['Name', 'Email', 'Phone', 'Subject', 'Message']]);
+            xlsx.utils.book_append_sheet(workbook, sheet, 'FormData');
+        }
+
+        const rows = xlsx.utils.sheet_to_json(sheet, { header: 1 });
+        rows.push([name, email, phone, subject, message]);
+        workbook.Sheets[workbook.SheetNames[0]] = xlsx.utils.aoa_to_sheet(rows);
+        xlsx.writeFile(workbook, filePath);
+
+        res.status(200).json({ message: 'Form data saved successfully!' });
+    });
 });
