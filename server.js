@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
     secure: true, // SSL kullanımı
     auth: {
         user: "info@gorkemaraz.com", // Kullanıcı adınız
-        pass: "GorkemAraz65", // Şifreniz
+        pass: "password :) ", // Şifreniz
     },
 });
 
