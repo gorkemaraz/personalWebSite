@@ -48,9 +48,9 @@ navLinks.forEach(link => {
         navbar.classList.remove('active'); 
     };
 });
-const form = document.querySelector('#contactForm');
+const form = document.querySelector("#contactForm");
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = {
@@ -62,22 +62,32 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('https://gorkemaraz.com/submit-form', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+        const response = await fetch("https://gorkemaraz.com/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
         });
 
         if (response.ok) {
-            alert('Form başarıyla gönderildi!');
-            form.reset(); // Form sıfırla
+            Swal.fire({
+                title: "Başarılı!",
+                text: "Mesajınız başarıyla gönderildi!",
+                icon: "success",
+            });
+            form.reset(); // Formu temizle
         } else {
-            alert('Bir hata oluştu, lütfen tekrar deneyin.');
+            Swal.fire({
+                title: "Hata!",
+                text: "Mesaj gönderilirken bir sorun oluştu.",
+                icon: "error",
+            });
         }
     } catch (error) {
-        console.error('Hata:', error);
-        alert('Sunucuya bağlanılamadı!');
+        console.error("Mesaj gönderim hatası:", error);
+        Swal.fire({
+            title: "Hata!",
+            text: "Bağlantı kurulamadı. Lütfen tekrar deneyin.",
+            icon: "error",
+        });
     }
 });
