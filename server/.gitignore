@@ -1,0 +1,7 @@
+node_modules/
+.env
+data/messages.json
+data/backups/
+data/cv-onceki.pdf
+data/stats.json
+data/stats-today.json

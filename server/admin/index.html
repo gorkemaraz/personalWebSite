@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Yönetim Paneli | gorkemaraz.com</title>
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/admin/static/admin.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">Görkem <span>Araz</span><small>Panel</small></div>
+        <div class="spacer"></div>
+        <a class="btn" href="/" target="_blank" rel="noopener">↗ <span>Siteyi aç</span></a>
+        <button class="btn" id="logoutBtn" type="button">⎋ <span>Çıkış</span></button>
+    </header>
+
+    <nav class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="content" aria-selected="true">İçerik</button>
+        <button class="tab" role="tab" data-tab="stats" aria-selected="false">İstatistik</button>
+        <button class="tab" role="tab" data-tab="messages" aria-selected="false">Mesajlar<span class="badge-count" id="unreadCount" hidden></span></button>
+        <button class="tab" role="tab" data-tab="cv" aria-selected="false">CV</button>
+        <button class="tab" role="tab" data-tab="backups" aria-selected="false">Yedekler</button>
+    </nav>
+
+    <main class="panel">
+        <section id="tab-content">
+            <h2>Site içeriği</h2>
+            <p class="muted">Değişiklikleri yapıp alttaki <strong>Kaydet ve yayınla</strong> butonuna basın. Kayıttan önce mevcut hâl otomatik yedeklenir.</p>
+            <div id="editor"></div>
+        </section>
+
+        <section id="tab-stats" hidden>
+            <h2>İstatistik</h2>
+            <p class="muted">Çerezsiz ve anonim: IP adresi saklanmaz, kişiler günler arasında tanınmaz. Botlar ve "beni takip etme" ayarı açık tarayıcılar sayılmaz.</p>
+
+            <div class="range" role="group" aria-label="Zaman aralığı">
+                <button type="button" class="btn btn-sm" data-days="7">Son 7 gün</button>
+                <button type="button" class="btn btn-sm" data-days="30">Son 30 gün</button>
+                <button type="button" class="btn btn-sm" data-days="90">Son 90 gün</button>
+            </div>
+
+            <div class="tiles" id="statTiles"></div>
+
+            <div class="box chart-box">
+                <div class="chart-head">
+                    <h3>Günlük tekil ziyaretçi</h3>
+                    <button type="button" class="btn btn-sm" id="toggleTable">Tablo olarak göster</button>
+                </div>
+                <div class="chart" id="dailyChart"></div>
+                <div class="table-wrap" id="dailyTable" hidden></div>
+            </div>
+
+            <div class="two-col">
+                <div class="box">
+                    <h3>Nereden geldiler?</h3>
+                    <div id="refList"></div>
+                </div>
+                <div class="box">
+                    <h3>Cihaz</h3>
+                    <div id="deviceList"></div>
+                </div>
+            </div>
+
+            <label class="check self-track">
+                <input type="checkbox" id="noTrack">
+                <span>Bu tarayıcıdan yaptığım ziyaretleri sayma</span>
+            </label>
+        </section>
+
+        <section id="tab-messages" hidden>
+            <h2>Mesajlar</h2>
+            <p class="muted">İletişim formundan gelen mesajlar. E-posta ulaşmasa bile burada saklanır.</p>
+            <div id="messageList"></div>
+        </section>
+
+        <section id="tab-cv" hidden>
+            <h2>CV</h2>
+            <p class="muted">Sitedeki "CV İndir" butonunun indirdiği dosya. Yeni dosya yüklenince bir öncekisi sunucuda (herkese kapalı) saklanır.</p>
+            <div class="box">
+                <div id="cvStatus" class="muted">Yükleniyor...</div>
+                <label>
+                    <span>Yeni CV (PDF, en fazla 5 MB)</span>
+                    <input type="file" id="cvFile" accept="application/pdf,.pdf">
+                </label>
+                <div><button class="btn btn-primary" id="cvUpload" type="button" disabled>Yükle</button></div>
+            </div>
+        </section>
+
+        <section id="tab-backups" hidden>
+            <h2>Yedekler</h2>
+            <p class="muted">Her kayıttan önce içeriğin o anki hâli yedeklenir (son 30 kayıt). Geri yükleme de yeni bir yedek oluşturur, yani geri almak her zaman mümkündür.</p>
+            <div class="box" id="backupList"></div>
+        </section>
+    </main>
+
+    <div class="savebar" id="savebar">
+        <span class="status" id="saveStatus">Değişiklik yok</span>
+        <button class="btn btn-primary" id="saveBtn" type="button" disabled>Kaydet ve yayınla</button>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+
+    <script src="/admin/static/app.js"></script>
+</body>
+</html>

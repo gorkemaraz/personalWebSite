@@ -1,0 +1,15 @@
+# Bağımlılıklar
+node_modules/
+
+# Şifreler — asla repoya girmez
+.env
+
+# Sunucuda oluşan çalışma verileri (mesajlar, istatistik, yedekler)
+server/data/messages.json
+server/data/backups/
+server/data/cv-onceki.pdf
+server/data/stats.json
+server/data/stats-today.json
+
+# CV kişisel bilgi içerir; sadece sitede durur
+public_html/cv/

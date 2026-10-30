@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Görkem Araz | Finans & Yazılım",
+    "description": "Görkem Araz — Bilgisayar Mühendisliği 4. sınıf öğrencisi, SPL Düzey 1 lisanslı. Finansal piyasalar ile yazılımı birleştiren projeler geliştiriyor."
+  },
+  "hero": {
+    "badge": "SPL Düzey 1 Lisanslı",
+    "name": "Görkem Araz",
+    "phrases": [
+      "Bilgisayar Mühendisi",
+      "Borsacı Mühendis"
+    ],
+    "intro": "Bandırma Onyedi Eylül Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Sermaye piyasalarını hem yatırımcı hem mühendis gözüyle tanıyorum: Go ile backend sistemleri geliştiriyor, Borsa İstanbul verisi üzerinde tarama algoritmaları yazıyorum."
+  },
+  "about": {
+    "lead": "2021'den beri Borsa İstanbul başta olmak üzere finansal piyasaları takip ediyorum. Piyasada öğrendiklerimi mühendislikle birleştirip veriye dayalı, ölçülebilir araçlar üretmeye çalışıyorum.",
+    "stats": [
+      { "value": "4.", "label": "sınıf · 2027 mezuniyet" },
+      { "value": "2", "label": "SPL lisansı" },
+      { "value": "2021", "label": "yılından beri piyasalarda" }
+    ],
+    "focus": [
+      {
+        "icon": "bx-server",
+        "title": "Backend & Veri",
+        "text": "Go ve PostgreSQL ile REST API'ler, iş kuralı ağırlıklı sistemler ve Docker ile tek komutta ayağa kalkan ortamlar."
+      },
+      {
+        "icon": "bx-line-chart",
+        "title": "Finansal Piyasalar",
+        "text": "Teknik analiz, price action ve risk yönetimi; SPL lisanslarıyla sermaye piyasası mevzuatı ve araçları."
+      },
+      {
+        "icon": "bx-code-curly",
+        "title": "Fintech",
+        "text": "İndikatör ve formasyon taramaları gibi, piyasa bilgisini koda döken araçlar geliştirmek."
+      }
+    ]
+  },
+  "licenses": [
+    {
+      "icon": "bx-certification",
+      "date": "Eylül 2026",
+      "title": "Sermaye Piyasası Faaliyetleri Düzey 1 Lisansı",
+      "issuer": "SPL — Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu",
+      "description": "Sermaye piyasası mevzuatı, sermaye piyasası araçları ve temel finans konularını kapsar."
+    },
+    {
+      "icon": "bx-book-open",
+      "date": "Ağustos 2024",
+      "title": "Finansal Okuryazarlık Lisansı",
+      "issuer": "SPL — Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu",
+      "description": "Bütçe yönetimi, tasarruf, yatırım araçları ve finansal risk gibi temel finansal okuryazarlık konularını kapsar."
+    }
+  ],
+  "projects": [
+    {
+      "title": "BordroPlus",
+      "featured": true,
+      "link": "https://github.com/gorkemaraz/BordroPlus",
+      "linkLabel": "Kaynak kod",
+      "description": "1.500 çalışanlı bir şirket için insan kaynakları ve bordro yönetim sistemi. Veri üretici (simülatör) gerçekçi şirket verisi oluşturuyor; tüm sistem Docker Compose ile tek komutla çalışıyor.",
+      "points": [
+        "Personel kartı ve organizasyon ağacı",
+        "Yıllık izin, puantaj ve fazla mesai takibi",
+        "Aylık bordro hesaplama",
+        "Go API + React arayüzü"
+      ],
+      "tags": ["Go", "PostgreSQL 16", "React", "Docker Compose"],
+      "note": ""
+    },
+    {
+      "title": "Borsa İstanbul Tarama Araçları",
+      "featured": false,
+      "link": "",
+      "linkLabel": "",
+      "description": "Hisse verisi üzerinde formasyon ve indikatör taramaları yapan algoritmalar.",
+      "points": [
+        "**Three Inside Up:** son 3 günün mum verisinden formasyonu tespit eden tarayıcı",
+        "**Momentum filtresi:** haftalık getirisi %15'in altında kalan, kısa vadeli hareketli ortalamanın üzerindeki hisseleri süzer",
+        "**RSI & MACD:** RSI uyumsuzlukları ve MACD kesişimlerini fiyatla birlikte inceler"
+      ],
+      "tags": ["Python", "Teknik Analiz", "Veri Analizi"],
+      "note": "Araştırma ve eğitim amaçlıdır; yatırım tavsiyesi değildir."
+    }
+  ],
+  "skills": [
+    {
+      "icon": "bx-code-alt",
+      "title": "Programlama Dilleri",
+      "tags": ["Go", "Python", "Java", "C#", "C", "C++", "JavaScript", "TypeScript", "SQL"]
+    },
+    {
+      "icon": "bx-server",
+      "title": "Backend & Altyapı",
+      "tags": ["REST API", "PostgreSQL", "Redis", "Docker", "Docker Compose", "Git", "GitHub", "GitLab"]
+    },
+    {
+      "icon": "bx-layout",
+      "title": "Arayüz",
+      "tags": ["React", "HTML", "CSS"]
+    },
+    {
+      "icon": "bx-line-chart",
+      "title": "Finans",
+      "tags": ["Teknik Analiz", "Price Action", "Risk Yönetimi", "Sermaye Piyasası Mevzuatı"]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "Eylül 2026",
+      "title": "SPL Düzey 1 Lisansı",
+      "text": "Sermaye Piyasası Faaliyetleri Düzey 1 lisans sınavını başarıyla tamamladım."
+    },
+    {
+      "date": "Ağustos 2024",
+      "title": "SPL Finansal Okuryazarlık Lisansı",
+      "text": "Sermaye piyasalarına yönelik ilk lisansımı aldım."
+    },
+    {
+      "date": "2023 – 2027",
+      "title": "Bandırma Onyedi Eylül Üniversitesi",
+      "text": "Bilgisayar Mühendisliği, 4. sınıf."
+    },
+    {
+      "date": "2021 – Günümüz",
+      "title": "Teknik Analiz & Finansal Piyasalar",
+      "text": "Teknik analiz eğitimleriyle başladığım süreçte Borsa İstanbul başta olmak üzere piyasaları aktif olarak takip ediyor, risk yönetimi odaklı çalışıyorum."
+    },
+    {
+      "date": "2018 – 2022",
+      "title": "Alparslan Fen Lisesi",
+      "text": "Sayısal ağırlıklı fen lisesi eğitimimle matematik ve analitik düşünme temelimi burada attım..."
+    }
+  ]
+}

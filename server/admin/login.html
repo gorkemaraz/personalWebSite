@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Panel Girişi | gorkemaraz.com</title>
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/admin/static/admin.css">
+</head>
+<body class="login-page">
+    <main class="login-card">
+        <h1>Görkem <span>Araz</span></h1>
+        <p class="muted">Yönetim paneli</p>
+        <form id="loginForm" novalidate>
+            <label>
+                <span>Şifre</span>
+                <input type="password" name="password" autocomplete="current-password" required autofocus>
+            </label>
+            <label>
+                <span>Doğrulama kodu</span>
+                <input type="text" name="code" inputmode="numeric" pattern="[0-9 ]*" maxlength="7"
+                       autocomplete="one-time-code" placeholder="Authenticator'daki 6 haneli kod" required>
+            </label>
+            <p class="form-error" id="loginError" role="alert"></p>
+            <button type="submit" class="btn btn-primary">Giriş yap</button>
+        </form>
+    </main>
+    <script src="/admin/static/login.js"></script>
+</body>
+</html>

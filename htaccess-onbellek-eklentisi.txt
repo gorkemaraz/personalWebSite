@@ -1,0 +1,27 @@
+# ---------- Önbellek ayarları (gorkemaraz.com) ----------
+# Bu bloğu sunucudaki public_html/.htaccess dosyasının EN SONUNA ekle.
+# Dosyadaki mevcut satırları SİLME: iletişim formunun Node uygulamasına
+# ulaşması onlara bağlı.
+
+<IfModule mod_headers.c>
+    # HTML: her açılışta sunucuya "değişti mi?" diye sorulsun
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+
+    # CSS / JS: 1 yıl saklansın (index.html'deki ?v= değişince yenisi indirilir)
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Görseller, CV: 1 hafta
+    <FilesMatch "\.(png|jpe?g|webp|svg|ico|pdf)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+
+    # robots.txt / sitemap.xml: 1 gün
+    <FilesMatch "\.(txt|xml)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+# ---------- Önbellek ayarları sonu ----------

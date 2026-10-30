@@ -1,0 +1,17 @@
+{
+  "name": "gorkemaraz-site",
+  "private": true,
+  "description": "gorkemaraz.com iletişim formu sunucusu",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "nodemailer": "^10.3.1"
+  }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- Bu dosya panelden üretilir: elle düzenlenen değişiklikler sonraki kayıtta silinir.
+     Şablon: server/templates/index.html -->
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görkem Araz | Finans &amp; Yazılım</title>
+    <meta name="description" content="Görkem Araz — Bilgisayar Mühendisliği 4. sınıf öğrencisi, SPL Düzey 1 lisanslı. Finansal piyasalar ile yazılımı birleştiren projeler geliştiriyor.">
+    <meta name="author" content="Görkem Araz">
+    <link rel="canonical" href="https://gorkemaraz.com/">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Tarayıcıların "zorunlu karanlık mod"u siteyi koyulaştırmasın -->
+    <meta name="color-scheme" content="only light">
+
+    <!-- Sosyal medya önizlemesi -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:url" content="https://gorkemaraz.com/">
+    <meta property="og:title" content="Görkem Araz | Finans &amp; Yazılım">
+    <meta property="og:description" content="Görkem Araz — Bilgisayar Mühendisliği 4. sınıf öğrencisi, SPL Düzey 1 lisanslı. Finansal piyasalar ile yazılımı birleştiren projeler geliştiriyor.">
+    <meta property="og:image" content="https://gorkemaraz.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- ?v= değeri panel kaydedince dosya içeriğinden otomatik hesaplanır -->
+    <link rel="stylesheet" href="style.css?v=a25482520b">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Görkem Araz",
+        "url": "https://gorkemaraz.com/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Görkem Araz",
+        "url": "https://gorkemaraz.com",
+        "jobTitle": "Bilgisayar Mühendisliği Öğrencisi",
+        "alumniOf": "Bandırma Onyedi Eylül Üniversitesi",
+        "sameAs": [
+            "https://www.linkedin.com/in/gorkemaaraz/",
+            "https://github.com/gorkemaraz",
+            "https://twitter.com/gorkem_root"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">Görkem <span>Araz</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navbar">
+            <i class="bx bx-menu"></i>
+        </button>
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="active">Ana Sayfa</a>
+            <a href="#about">Hakkımda</a>
+            <a href="#license">Lisans</a>
+            <a href="#projects">Projeler</a>
+            <a href="#education">Eğitim</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <span class="badge"><i class="bx bx-badge-check"></i> SPL Düzey 1 Lisanslı</span>
+                <h1>Görkem Araz</h1>
+                <h2 class="tagline" aria-label="Bilgisayar Mühendisi, Borsacı Mühendis"><span id="typed" aria-hidden="true" data-phrases="[&quot;Bilgisayar Mühendisi&quot;,&quot;Borsacı Mühendis&quot;]">Bilgisayar Mühendisi</span><span class="cursor" aria-hidden="true"></span></h2>
+                <p>Bandırma Onyedi Eylül Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Sermaye piyasalarını hem yatırımcı hem mühendis gözüyle tanıyorum: Go ile backend sistemleri geliştiriyor, Borsa İstanbul verisi üzerinde tarama algoritmaları yazıyorum.</p>
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary">Projelerim</a>
+                    <a href="cv/gorkem-araz-cv.pdf" class="btn" download><i class="bx bx-download"></i> CV İndir</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/gorkemaaraz/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/gorkemaraz" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://twitter.com/gorkem_root" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bx bxl-twitter"></i></a>
+                    <a href="mailto:info@gorkemaraz.com" aria-label="E-posta"><i class="bx bx-envelope"></i></a>
+                </div>
+            </div>
+            <div class="home-img">
+                <img src="img/logo-acik-tema.png" width="600" height="600" alt="Borsacı Mühendis logosu">
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <h2 class="heading">Hakkımda</h2>
+            <p class="section-lead">2021&#39;den beri Borsa İstanbul başta olmak üzere finansal piyasaları takip ediyorum. Piyasada öğrendiklerimi mühendislikle birleştirip veriye dayalı, ölçülebilir araçlar üretmeye çalışıyorum.</p>
+
+            <div class="stats">
+                <div class="stat"><strong>4.</strong><span>sınıf · 2027 mezuniyet</span></div>
+                <div class="stat"><strong>2</strong><span>SPL lisansı</span></div>
+                <div class="stat"><strong>2021</strong><span>yılından beri piyasalarda</span></div>
+            </div>
+
+            <div class="focus-grid">
+                <article class="card focus">
+                    <i class="bx bx-server"></i>
+                    <h3>Backend &amp; Veri</h3>
+                    <p>Go ve PostgreSQL ile REST API&#39;ler, iş kuralı ağırlıklı sistemler ve Docker ile tek komutta ayağa kalkan ortamlar.</p>
+                </article>
+                <article class="card focus">
+                    <i class="bx bx-line-chart"></i>
+                    <h3>Finansal Piyasalar</h3>
+                    <p>Teknik analiz, price action ve risk yönetimi; SPL lisanslarıyla sermaye piyasası mevzuatı ve araçları.</p>
+                </article>
+                <article class="card focus">
+                    <i class="bx bx-code-curly"></i>
+                    <h3>Fintech</h3>
+                    <p>İndikatör ve formasyon taramaları gibi, piyasa bilgisini koda döken araçlar geliştirmek.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- LICENSE -->
+        <section class="license" id="license">
+            <h2 class="heading">Lisans & Sertifikalar</h2>
+            <div class="license-list">
+                <article class="card license-card">
+                    <div class="license-icon"><i class="bx bx-certification"></i></div>
+                    <div class="license-body">
+                        <span class="license-date">Eylül 2026</span>
+                        <h3>Sermaye Piyasası Faaliyetleri Düzey 1 Lisansı</h3>
+                        <p>SPL — Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu</p>
+                        <p class="muted">Sermaye piyasası mevzuatı, sermaye piyasası araçları ve temel finans konularını kapsar.</p>
+                    </div>
+                </article>
+                <article class="card license-card">
+                    <div class="license-icon"><i class="bx bx-book-open"></i></div>
+                    <div class="license-body">
+                        <span class="license-date">Ağustos 2024</span>
+                        <h3>Finansal Okuryazarlık Lisansı</h3>
+                        <p>SPL — Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu</p>
+                        <p class="muted">Bütçe yönetimi, tasarruf, yatırım araçları ve finansal risk gibi temel finansal okuryazarlık konularını kapsar.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects" id="projects">
+            <h2 class="heading">Projeler</h2>
+            <div class="projects-grid">
+                <article class="card project featured">
+                    <div class="project-head">
+                        <h3>BordroPlus</h3>
+                        <a href="https://github.com/gorkemaraz/BordroPlus" target="_blank" rel="noopener" class="project-link" aria-label="BordroPlus bağlantısı">
+                            <i class="bx bxl-github"></i> Kaynak kod
+                        </a>
+                    </div>
+                    <p>1.500 çalışanlı bir şirket için insan kaynakları ve bordro yönetim sistemi. Veri üretici (simülatör) gerçekçi şirket verisi oluşturuyor; tüm sistem Docker Compose ile tek komutla çalışıyor.</p>
+                    <ul class="project-points">
+                        <li>Personel kartı ve organizasyon ağacı</li>
+                        <li>Yıllık izin, puantaj ve fazla mesai takibi</li>
+                        <li>Aylık bordro hesaplama</li>
+                        <li>Go API + React arayüzü</li>
+                    </ul>
+                    <div class="tags"><span>Go</span><span>PostgreSQL 16</span><span>React</span><span>Docker Compose</span></div>
+                </article>
+
+                <article class="card project">
+                    <div class="project-head">
+                        <h3>Borsa İstanbul Tarama Araçları</h3>
+                    </div>
+                    <p>Hisse verisi üzerinde formasyon ve indikatör taramaları yapan algoritmalar.</p>
+                    <ul class="project-points">
+                        <li><strong>Three Inside Up:</strong> son 3 günün mum verisinden formasyonu tespit eden tarayıcı</li>
+                        <li><strong>Momentum filtresi:</strong> haftalık getirisi %15&#39;in altında kalan, kısa vadeli hareketli ortalamanın üzerindeki hisseleri süzer</li>
+                        <li><strong>RSI &amp; MACD:</strong> RSI uyumsuzlukları ve MACD kesişimlerini fiyatla birlikte inceler</li>
+                    </ul>
+                    <div class="tags"><span>Python</span><span>Teknik Analiz</span><span>Veri Analizi</span></div>
+                    <p class="note"><i class="bx bx-info-circle"></i> Araştırma ve eğitim amaçlıdır; yatırım tavsiyesi değildir.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills" id="skills">
+            <h2 class="heading">Yetkinlikler</h2>
+            <div class="skills-grid">
+                <div class="card skill-group">
+                    <h3><i class="bx bx-code-alt"></i> Programlama Dilleri</h3>
+                    <div class="tags"><span>Go</span><span>Python</span><span>Java</span><span>C#</span><span>C</span><span>C++</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span></div>
+                </div>
+                <div class="card skill-group">
+                    <h3><i class="bx bx-server"></i> Backend &amp; Altyapı</h3>
+                    <div class="tags"><span>REST API</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>Docker Compose</span><span>Git</span><span>GitHub</span><span>GitLab</span></div>
+                </div>
+                <div class="card skill-group">
+                    <h3><i class="bx bx-layout"></i> Arayüz</h3>
+                    <div class="tags"><span>React</span><span>HTML</span><span>CSS</span></div>
+                </div>
+                <div class="card skill-group">
+                    <h3><i class="bx bx-line-chart"></i> Finans</h3>
+                    <div class="tags"><span>Teknik Analiz</span><span>Price Action</span><span>Risk Yönetimi</span><span>Sermaye Piyasası Mevzuatı</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="education" id="education">
+            <h2 class="heading">Eğitim & Yol Haritası</h2>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <span class="timeline-date">Eylül 2026</span>
+                    <div class="card timeline-content">
+                        <h3>SPL Düzey 1 Lisansı</h3>
+                        <p>Sermaye Piyasası Faaliyetleri Düzey 1 lisans sınavını başarıyla tamamladım.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">Ağustos 2024</span>
+                    <div class="card timeline-content">
+                        <h3>SPL Finansal Okuryazarlık Lisansı</h3>
+                        <p>Sermaye piyasalarına yönelik ilk lisansımı aldım.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">2023 – 2027</span>
+                    <div class="card timeline-content">
+                        <h3>Bandırma Onyedi Eylül Üniversitesi</h3>
+                        <p>Bilgisayar Mühendisliği, 4. sınıf.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">2021 – Günümüz</span>
+                    <div class="card timeline-content">
+                        <h3>Teknik Analiz &amp; Finansal Piyasalar</h3>
+                        <p>Teknik analiz eğitimleriyle başladığım süreçte Borsa İstanbul başta olmak üzere piyasaları aktif olarak takip ediyor, risk yönetimi odaklı çalışıyorum.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">2018 – 2022</span>
+                    <div class="card timeline-content">
+                        <h3>Alparslan Fen Lisesi</h3>
+                        <p>Sayısal ağırlıklı fen lisesi eğitimimle matematik ve analitik düşünme temelimi burada attım...</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <h2 class="heading">İletişim</h2>
+            <p class="section-lead">Staj, proje veya iş birliği için yazabilirsiniz. Doğrudan e-posta: <a href="mailto:info@gorkemaraz.com">info@gorkemaraz.com</a></p>
+
+            <form id="contactForm" class="card contact-form" novalidate>
+                <div class="form-row">
+                    <label>
+                        <span>Ad Soyad *</span>
+                        <input type="text" name="name" autocomplete="name" required maxlength="80">
+                    </label>
+                    <label>
+                        <span>E-posta *</span>
+                        <input type="email" name="email" autocomplete="email" required maxlength="120">
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                        <span>Telefon</span>
+                        <input type="tel" name="phone" autocomplete="tel" maxlength="20">
+                    </label>
+                    <label>
+                        <span>Konu</span>
+                        <input type="text" name="subject" maxlength="120">
+                    </label>
+                </div>
+                <label>
+                    <span>Mesajınız *</span>
+                    <textarea name="message" rows="6" required minlength="10" maxlength="3000"></textarea>
+                </label>
+                <!-- Bot tuzağı: insanlar görmez, botlar doldurur -->
+                <label class="hp" aria-hidden="true">
+                    <span>Web sitesi</span>
+                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                </label>
+                <div class="form-footer">
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                    <button type="submit" class="btn btn-primary">Mesajı Gönder</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/gorkemaaraz/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/gorkemaraz" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a href="https://twitter.com/gorkem_root" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/gorkemaraz_" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
+        <p class="disclaimer">Bu sitedeki içerik ve projeler yalnızca bilgilendirme ve eğitim amaçlıdır; yatırım tavsiyesi niteliği taşımaz.<br>
+            Bu site çerez kullanmaz; yalnızca anonim ziyaret sayıları tutulur.</p>
+        <p class="copyright">&copy; <span id="year">2026</span> <span class="accent">Görkem Araz</span></p>
+    </footer>
+
+    <script src="script.js?v=a25482520b"></script>
+</body>
+</html>
